@@ -2,7 +2,6 @@
 #include <math.h>
 #include <stdlib.h>
 #include <time.h>
-const int Low = -100, High = 200;
 int n;
 int a[100];
 void nmas(int *n);
@@ -23,9 +22,11 @@ int main(){
 void nmas(int *n) {
   printf("Введіть n: ");
   scanf("%d", n);
-  srand(time(0));
+
 }
 void mas(int *a, int n) {
+const int Low = -100, High = 200;
+srand(time(0));
 for (int i = 0; i < n; i++) {
 *(a+i) = rand() % (High - Low + 1) + Low;
   } 
